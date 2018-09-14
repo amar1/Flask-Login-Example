@@ -3,7 +3,7 @@ This code sample makes use of Flask and sqlalchemy (mysql+pymysql), a library th
 
 ## Requirements.txt
     Flask
-    Flask-SQLAlchemy
+    sqlalchemy
 
 ## Setup Repo
 ```
