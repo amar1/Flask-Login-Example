@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% if session['logged_in'] %}
+<p>Oh no Dont show page</p>
+{% else %}
+
+	<div class="main-w3layouts wrapper">
+		<h1>Register</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top"> 
+				<form action="/register/" method="POST">
+			  		<input class="text" type="text" name="username" placeholder="Username">
+			  		<input class="text w3lpass" type="text" name="password" placeholder="Password">
+			  		<input type="submit" value="Sign Up">
+				</form>
+				<p>If have an Account? <a href="/login"> Login Now!</a></p>
+			</div>	 
+		</div>	
+	</div>	
+
+{% endif %}
+{% endblock %}

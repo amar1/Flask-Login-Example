@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+{% if session['logged_in'] %}
+   
+	{% if data %}
+	<h3>{{data}}</h3>
+	{% else %}
+
+	<a href="/logout">Logout</a> <br> <br>
+	<div class="main-w3layouts wrapper">
+		<h1>Find User</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top"> 
+				<form action="" method="POST">
+				  	<input class="text" type="username" name="username" placeholder="Username">
+				  	<input type="submit" value="Finds">
+				</form>
+			</div>	 
+		</div>	
+	</div>	
+
+	{% endif %}
+
+{% else %}
+
+<p>Not login!</p>
+<a href="/login">Login</a> 
+<a href="/register">Register</a>
+
+{% endif %}
+{% endblock %}
